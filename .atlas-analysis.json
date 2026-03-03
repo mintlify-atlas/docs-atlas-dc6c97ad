@@ -1,0 +1,220 @@
+{
+  "projectType": "api-service",
+  "projectName": "Trieve",
+  "projectDescription": "All-in-one API platform for building search, recommendations, and RAG experiences on your data.",
+  "theme": "aspen",
+  "primaryColor": "#a33eb5",
+  "lightColor": "#a33eb5",
+  "darkColor": "#a33eb5",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "trieve-primitives",
+              "screenshots"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/create-chunk",
+              "guides/uploading-files",
+              "guides/uploading-csv-and-jsonl-files",
+              "guides/searching-with-trieve",
+              "guides/recommending-with-trieve",
+              "guides/rag-with-trieve",
+              "guides/analytics-quickstart",
+              "guides/multi-tenancy",
+              "guides/group-with-trieve",
+              "guides/using-exposed-api-keys",
+              "guides/voice-search-setup",
+              "guides/image-search-setup",
+              "guides/dataset-crawls"
+            ]
+          },
+          {
+            "group": "Self Hosting",
+            "pages": [
+              "self-hosting/docker-compose",
+              "self-hosting/aws",
+              "self-hosting/gcp",
+              "self-hosting/azure"
+            ]
+          },
+          {
+            "group": "Examples",
+            "pages": [
+              "examples/job-board",
+              "examples/ecommerce"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Authentication",
+            "pages": [
+              "api-reference/auth/login",
+              "api-reference/auth/get-me",
+              "api-reference/auth/logout"
+            ]
+          },
+          {
+            "group": "Chunk",
+            "pages": [
+              "api-reference/chunk/create-or-upsert-chunk-or-chunks",
+              "api-reference/chunk/search",
+              "api-reference/chunk/autocomplete",
+              "api-reference/chunk/get-recommended-chunks",
+              "api-reference/chunk/rag-on-specified-chunks",
+              "api-reference/chunk/update-chunk",
+              "api-reference/chunk/get-chunk-by-id",
+              "api-reference/chunk/delete-chunk"
+            ]
+          },
+          {
+            "group": "Chunk Group",
+            "pages": [
+              "api-reference/chunk-group/create-or-upsert-group-or-groups",
+              "api-reference/chunk-group/search-over-groups",
+              "api-reference/chunk-group/search-within-group",
+              "api-reference/chunk-group/add-chunk-to-group",
+              "api-reference/chunk-group/get-group",
+              "api-reference/chunk-group/get-chunks-in-group",
+              "api-reference/chunk-group/update-group",
+              "api-reference/chunk-group/delete-group"
+            ]
+          },
+          {
+            "group": "Dataset",
+            "pages": [
+              "api-reference/dataset/create-dataset",
+              "api-reference/dataset/get-dataset-by-id",
+              "api-reference/dataset/update-dataset-by-id-or-tracking-id",
+              "api-reference/dataset/get-usage-by-dataset-id",
+              "api-reference/dataset/delete-dataset"
+            ]
+          },
+          {
+            "group": "File",
+            "pages": [
+              "api-reference/file/upload-file",
+              "api-reference/file/get-files-for-dataset",
+              "api-reference/file/get-file",
+              "api-reference/file/delete-file"
+            ]
+          },
+          {
+            "group": "Analytics",
+            "pages": [
+              "api-reference/analytics/get-analytics",
+              "api-reference/analytics/get-search-analytics",
+              "api-reference/analytics/get-rag-analytics",
+              "api-reference/analytics/get-recommendation-analytics",
+              "api-reference/analytics/send-user-event-data"
+            ]
+          },
+          {
+            "group": "Organization",
+            "pages": [
+              "api-reference/organization/create-organization",
+              "api-reference/organization/get-organization",
+              "api-reference/organization/update-organization",
+              "api-reference/organization/get-organization-usage",
+              "api-reference/organization/delete-organization"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Vector Inference",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "vector-inference/introduction",
+              "vector-inference/pricing",
+              "vector-inference/architecture"
+            ]
+          },
+          {
+            "group": "Models",
+            "pages": [
+              "vector-inference/dense",
+              "vector-inference/splade",
+              "vector-inference/rerank",
+              "vector-inference/openai"
+            ]
+          },
+          {
+            "group": "API Reference",
+            "pages": [
+              "vector-inference/embed",
+              "vector-inference/embed-all",
+              "vector-inference/embed-sparse",
+              "vector-inference/reranker",
+              "vector-inference/openai-compat",
+              "vector-inference/health-check"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "vector-inference/aws-installation",
+              "vector-inference/troubleshooting",
+              "vector-inference/upgrading"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "SiteSearch AI",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "site-search/introduction"
+            ]
+          },
+          {
+            "group": "Use Cases",
+            "pages": [
+              "site-search/ecommerce",
+              "site-search/content-sites",
+              "site-search/youtube-channels"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Semantic, fulltext, hybrid, and BM25 search",
+    "RAG (Retrieval Augmented Generation)",
+    "Recommendations engine",
+    "Analytics and CTR tracking",
+    "Multi-tenant datasets and organizations",
+    "File upload and processing",
+    "Vector embeddings and reranking",
+    "Self-hostable infrastructure"
+  ],
+  "publicApiSurface": [
+    "POST /api/chunk/search - Search over chunks",
+    "POST /api/chunk - Create or upsert chunks",
+    "POST /api/chunk/recommend - Get recommendations",
+    "POST /api/chunk/generate - RAG completions",
+    "POST /api/chunk_group - Create chunk groups",
+    "POST /api/dataset - Create dataset",
+    "POST /api/file - Upload files",
+    "GET /api/analytics - Get analytics",
+    "POST /api/organization - Create organization"
+  ]
+}
